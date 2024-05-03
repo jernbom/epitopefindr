@@ -87,7 +87,10 @@ epfind <- function(data = NULL, output.dir = NULL,
   data.table::fwrite(peptide.name.map,
                      paste0(temp.dir, "peptide_name_map.txt"), sep = "\t")
 
-  blast1 <- selfBLASTaa(f1.path) %>% (data.table::as.data.table)
+  # blast1 <- selfBLASTaa(f1.path) %>% (data.table::as.data.table)
+  blast1 <- selfBLASTaa(f1.path) %>% (data.table::as.data.table) %>%
+    S4Vectors::rename("qseqid" = "qID", "sseqid" = "sID", "evalue" = "E", "qstart" = "qStart", "qend" = "qEnd", "sstart" = "sStart", "send" = "sEnd")
+  
   b1.path <- paste0(temp.dir, "blast1.csv")
   data.table::fwrite(blast1, b1.path)
   if(nrow(blast1) == 0){

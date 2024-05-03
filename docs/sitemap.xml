@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://brandonsie.github.io/epitopefindr/404.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/articles/epitopefidnr_avarda_vignette.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/articles/epitopefindr_avarda_vignette.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/head.html</loc>
+  </url>
+  <url>
     <loc>https://brandonsie.github.io/epitopefindr/index.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/readme.html</loc>
   </url>
   <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/addPepSeq.html</loc>
@@ -13,10 +40,16 @@
     <loc>https://brandonsie.github.io/epitopefindr/reference/cycleBLAST.html</loc>
   </url>
   <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/dbCleanup.html</loc>
+  </url>
+  <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/decipherGaps.html</loc>
   </url>
   <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/epfind.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/epFind2.html</loc>
   </url>
   <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/epitopeBLAST.html</loc>
@@ -31,10 +64,34 @@
     <loc>https://brandonsie.github.io/epitopefindr/reference/epPB.html</loc>
   </url>
   <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/epSetupBLAST.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/epSetupDirectory.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/epSetupPeptides.html</loc>
+  </url>
+  <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/filterBLAST.html</loc>
   </url>
   <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/glAssign.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/glGet.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/glParamAssign.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/glParamGet.html</loc>
+  </url>
+  <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/groupMSA.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/index.html</loc>
   </url>
   <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/indexEpitopes.html</loc>
@@ -58,6 +115,9 @@
     <loc>https://brandonsie.github.io/epitopefindr/reference/organizeBLAST.html</loc>
   </url>
   <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/outputFiles.html</loc>
+  </url>
+  <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/outputTable.html</loc>
   </url>
   <url>
@@ -68,6 +128,9 @@
   </url>
   <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/prepareBLAST.html</loc>
+  </url>
+  <url>
+    <loc>https://brandonsie.github.io/epitopefindr/reference/printSignpost.html</loc>
   </url>
   <url>
     <loc>https://brandonsie.github.io/epitopefindr/reference/qsSwap.html</loc>
@@ -106,6 +169,6 @@
     <loc>https://brandonsie.github.io/epitopefindr/reference/writeFastaAA.html</loc>
   </url>
   <url>
-    <loc>https://brandonsie.github.io/epitopefindr/articles/epitopefindr_avarda_vignette.html</loc>
+    <loc>https://brandonsie.github.io/epitopefindr/TODO.html</loc>
   </url>
 </urlset>

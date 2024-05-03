@@ -12,8 +12,12 @@ indexEpitopes <- function(blast, index, aln.size){
 
 
   blast.index <- rbind(
-    blast[blast$qID==index,-"nAlign"],
-    qsSwap(blast[blast$sID==index,-"nAlign"])) %>% unique
+    blast[blast$qID==index,] %>% tidytable::arrange(-nAlign),
+    qsSwap(blast[blast$sID==index,] %>% tidytable::arrange(-nAlign))) %>% unique
+
+  # blast.index <- rbind(
+    # blast[blast$qID==index,-"nAlign"],
+    # qsSwap(blast[blast$sID==index,-"nAlign"])) %>% unique
 
   # == == == == == A. Set up data frames. == =
   pos00 <- blast.index[, c("qStart", "qEnd")] %>% unique %>% data.frame #
@@ -111,30 +115,34 @@ indexEpitopes <- function(blast, index, aln.size){
 
 
       if(length(pos)>0){
-
-        gOverlap <- isOverlapping(blast.index[i,c("qStart","qEnd")],gpos, aln.size)
-        for(j in gOverlap){ #for each position of gpos that overlaps
-
-          dstart <- gpos[j, 1] - blast.index[i, "qStart"] #g-b. positive
-          dend <- gpos[j, 2] - blast.index[i, "qEnd"] #g-b. negative
-
-
-          #update so that multiple rows are made for each j that aligns
-          b.add <- blast[pos,]
-          for(p in 1:length(pos)){
-            b.add[p,"qStart"] %<>% + dstart
-            b.add[p,"qEnd"] %<>% + dend
-            b.add[p,"sStart"] %<>% + dstart
-            b.add[p,"sEnd"] %<>% + dend
+        if((min(blast.index[i,c("qStart", "qEnd")]) > 0) & (blast.index[i, "qStart"] < blast.index[i, "qEnd"])){
+          # avoid nonsense negative indices
+          
+          gOverlap <- epitopefindr:::isOverlapping(blast.index[i,c("qStart","qEnd")],gpos, aln.size)
+          for(j in gOverlap){ #for each position of gpos that overlaps
+            
+            dstart <- gpos[j, 1] - blast.index[i, "qStart"] #g-b. positive
+            dend <- gpos[j, 2] - blast.index[i, "qEnd"] #g-b. negative
+            
+            
+            #update so that multiple rows are made for each j that aligns
+            b.add <- blast[pos,]
+            for(p in 1:length(pos)){
+              b.add[p,"qStart"] %<>% + dstart
+              b.add[p,"qEnd"] %<>% + dend
+              b.add[p,"sStart"] %<>% + dstart
+              b.add[p,"sEnd"] %<>% + dend
+            }
+            blast <- rbind(blast, b.add)
+            
+            
           }
-          blast <- rbind(blast, b.add)
-
-
         }
-
+        
+        
         #then remove original qpos spos rows
         blast <- blast[-pos, ] %>% unique
-
+        
       }
     }
   }

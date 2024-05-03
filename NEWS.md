@@ -1,3 +1,7 @@
+# epitopefindr 1.1.31 (2024-05-03)
+## Major changes
+- updated various functions for comapibility with modern R (R 4.3.x, tidytable_0.10.2)
+
 # epitopefindr 1.1.30 (2020-09-19)
 ## Minor changes
 - Keep blast alignment table as data.table::data.table to fix changes in R 4.0

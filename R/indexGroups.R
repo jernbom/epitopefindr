@@ -182,6 +182,13 @@ indexGroups <- function(blast, fasta, mode="any", aln.size){
   for(i in length(groups):1){
     output$Group[output$ID %in% groups[[i]]] <- i
   }
+  
+  # filter for groups with at least 2 members
+  num_members <- output$Group %>% table
+  groups_with_twoplus <- as.numeric(names(num_members))[num_members > 1]
+  output <- output %>% filter(
+    Group %in% groups_with_twoplus
+  )
 
   return(output)
 

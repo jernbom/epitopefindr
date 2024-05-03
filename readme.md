@@ -66,7 +66,7 @@ epfind(<path to .fasta>, <path to output dir>, e.thresh = 0.0001)
 
 You can try running `epfind()` with some provided example data:
 ``` r
-my_peptides <- epitopefindr::pairwise_viral_hits
+my_peptides <- epitopefindr::pairwise_viral_hits[1:50]
 epitopefindr::epfind(data = my_peptides, output.dir = "my_epf_1/")
 ```
 

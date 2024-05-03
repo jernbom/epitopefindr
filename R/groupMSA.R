@@ -77,12 +77,14 @@ groupMSA <- function(groups, mpath = "intermediate_files/msa/",
 
     #trim group if too many members to msaprettyprint(). Store consensus sequence.
     group.vector <- as.character(group)
-    mg <- Biostrings::AAMultipleAlignment(group.vector, use.names = TRUE)
+    # mg <- Biostrings::AAMultipleAlignment(group.vector, use.names = TRUE)
+    mg <- msa::msa(group)
     if(length(group)>130){
       #(!) temporary workaround to print partial info for large groups
       print(paste("Warning: group trimmed:",i))
       group.vector <- group.vector[1:130]
-      mg <- Biostrings::AAMultipleAlignment(group.vector, use.names = TRUE)
+      # mg <- Biostrings::AAMultipleAlignment(group.vector, use.names = TRUE)
+      mg <- msa::msa(group[1:130])
     }
     group.consensus <- msa::msaConsensusSequence(mg, type = consensus.type, thresh = consensus.thresh)
     write(group.consensus,cpath,append=TRUE)
